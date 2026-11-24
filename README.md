@@ -20,8 +20,8 @@ Dashboard monitoring suhu & kelembaban (simulasi ESP32) dengan backend Node-RED 
 
 | File | Fungsi |
 |---|---|
-| `flow_rest_api_iot_v2.json` | Flow Node-RED (import ke Node-RED) |
-| `dashboard_v2.html` | Dashboard web |
+| `flow_rest_api_iot.json` | Flow Node-RED (import ke Node-RED) |
+| `dashboard.html` | Dashboard web |
 | `simulasi_esp32.py` | Simulator sensor ESP32 |
 
 ## Cara menjalankan
@@ -32,13 +32,13 @@ Dashboard monitoring suhu & kelembaban (simulasi ESP32) dengan backend Node-RED 
    API_KEY=rahasia-saya node-red
    ```
    Di Windows (PowerShell): `$env:API_KEY="rahasia-saya"; node-red`
-3. Buka `http://localhost:1880`, menu **Import** → pilih `flow_rest_api_iot_v2.json` → **Deploy**.
+3. Buka `http://localhost:1880`, menu **Import** → pilih `flow_rest_api_iot.json` → **Deploy**.
 4. Jalankan simulator:
    ```bash
    pip install paho-mqtt
    python simulasi_esp32.py
    ```
-5. Buka `dashboard_v2.html` di browser. Jika API key diubah, samakan nilai `API_KEY` di bagian atas `<script>`.
+5. Buka `dashboard.html` di browser. Jika API key diubah, samakan nilai `API_KEY` di bagian atas `<script>`.
 
 ## Daftar endpoint
 
